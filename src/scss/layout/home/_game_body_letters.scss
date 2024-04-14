@@ -1,0 +1,8 @@
+.game_body_letters {
+    @include flex(center, center, row, rem(5));
+    align-content: flex-start;
+
+    &_letter {
+        @include Boxletters($letterBackgroundColor, $white);
+    }
+}

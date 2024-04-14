@@ -1,0 +1,15 @@
+nav {
+    @include flex(space-between, center);
+
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    position: relative;
+
+    &::before {
+        @include before(100%, 0%, 100%, rem(1), rgba(0, 0, 0, 0.403));
+    }
+
+    .wordFrom {
+        color: $ColorWordFrom;
+    }
+}

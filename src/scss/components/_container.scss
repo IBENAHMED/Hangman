@@ -1,0 +1,24 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem(15);
+    padding-right: rem(15);
+}
+
+@include small {
+    .container {
+        width: rem(750);
+    }
+}
+
+@include medium {
+    .container {
+        width: rem(970);
+    }
+}
+
+@include large {
+    .container {
+        width: rem(1170);
+    }
+}

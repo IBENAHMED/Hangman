@@ -1,0 +1,82 @@
+.game_body_draw {
+    position: relative;
+    height: rem(400);
+    @include flex(center, center, column);
+    background-color: $backgroundColorHangman;
+
+    .the-stand {
+        position: relative;
+        height: rem(300);
+        width: rem(60);
+        border-bottom: rem(3) solid $black;
+
+        &::before {
+            @include before(0%, 50%, rem(3), 100%, $black);
+        }
+    }
+
+    .the-hang {
+        &::before {
+            @include before(rem(80), 50%, rem(100), rem(3), $black);
+        }
+
+        &::after {
+            @include before(rem(80), calc(50% + rem(100)), rem(3), rem(50), $black);
+        }
+    }
+
+    .the-rope {
+        @include headRopeBody(rem(130), calc(50% + 75px), rem(50), rem(50), dashed);
+    }
+
+    .the-man {
+        .head {
+            @include headRopeBody(rem(140), calc(50% + 85px), rem(30), rem(30));
+        }
+
+        .body {
+            @include headRopeBody(rem(170), calc(50% + rem(98)), rem(3), rem(90), none, 0%);
+            background-color: black;
+        }
+
+        .hands {
+            position: relative;
+
+            &::before {
+                @include before(rem(-200), calc(50% + rem(80)), rem(3), rem(70), $black);
+            }
+
+            &::after {
+                @include before(rem(-200), calc(50% + rem(115)), rem(3), rem(70), $black);
+            }
+        }
+
+        .legs {
+            position: relative;
+
+            &::before {
+                @include before(rem(-100), calc(50% + rem(80)), rem(3), rem(70), $black);
+            }
+
+            &::after {
+                @include before(rem(-100), calc(50% + rem(115)), rem(3), rem(70), $black);
+            }
+        }
+
+        .hands::before {
+            transform: rotate(-30deg);
+        }
+
+        .hands::after {
+            transform: rotate(30deg);
+        }
+
+        .legs::before {
+            transform: rotate(30deg);
+        }
+
+        .legs::after {
+            transform: rotate(-30deg);
+        }
+    }
+}

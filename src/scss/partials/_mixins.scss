@@ -1,0 +1,44 @@
+@mixin flex($justify, $align, $direction: row, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin before($top, $left, $width, $height, $ColorBefore) {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    background-color: $ColorBefore;
+}
+
+@mixin headRopeBody($top, $left, $width, $height, $border: solid, $radius: 50%, $position: absolute) {
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    border: 2px $border $black;
+    border-radius: $radius;
+}
+
+@mixin widtheight ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin Boxletters ($backgroundColor, $color) {
+    @include flex(center, center);
+    color: $color;
+    width: rem(50);
+    height: rem(50);
+    font-size: rem(25);
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $backgroundColor;
+}

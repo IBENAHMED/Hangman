@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="discription"
+      content="make a strong brain and enjoy the hangman game"
+    />
+    <meta name="keyword" content="game, Hangman, play, funny" />
+    <meta name="author" content="Reda IBENAHMED" />
+    <title>Hangman Game</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="src/scss/main.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="container">
+        <header class="game_header">
+          <nav>
+            <p>Hangma</p>
+            <p>Word From : <span class="wordFrom">Countries</span></p>
+          </nav>
+        </header>
+
+        <div class="game_body">
+          <div class="game_body_draw">
+            <div class="the-stand" style="display: none"></div>
+
+            <div class="the-hang" style="display: none"></div>
+
+            <div class="the-rope" style="display: none"></div>
+
+            <div class="the-man" style="display: none">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="hands"></div>
+              <div class="legs"></div>
+            </div>
+          </div>
+
+          <div class="game_body_letters"></div>
+        </div>
+
+        <div class="game_lettersGuess"></div>
+        <div class="game_over" style="display: none">
+          <a href="">Play again</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Link File JS -->
+    <script type=" module" src="src/js/dataWords.js"></script>
+    
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

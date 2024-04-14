@@ -1,0 +1,12 @@
+.game_lettersGuess {
+    background-color: $backgroundColorHangman;
+    @include flex(center, center, row, rem(15));
+    padding: rem(10);
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+
+    >div {
+        @include Boxletters($white, $black);
+        border-bottom: 2px solid $black;
+    }
+}

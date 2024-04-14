@@ -1,0 +1,23 @@
+@mixin extraSmall {
+    @media ($xs) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media ($sm) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media ($md) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media ($lg) {
+        @content;
+    }
+}

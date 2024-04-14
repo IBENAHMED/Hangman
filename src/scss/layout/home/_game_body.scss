@@ -1,0 +1,17 @@
+.game_body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(25);
+    margin-top: rem(15);
+    position: relative;
+
+    &::before {
+        @include before(103%, 0%, 100%, rem(1), $ColorBefore);
+    }
+}
+
+@include extraSmall() {
+    .game_body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
